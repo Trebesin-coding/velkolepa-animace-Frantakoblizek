@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Velkolepá Animace</title>
+    </head>
+    <style>
+        .plane1 {
+            width: 100px;
+            height: 60px;
+            background: linear-gradient(180deg, #3b4a6b, #1f2942);
+            position: absolute;
+            top: 600px;
+            animation: fly 5s linear forwards;
+        }
+        .plane2 {
+            width: 100px;
+            height: 60px;
+            background: linear-gradient(180deg, #3b4a6b, #1f2942);
+            position: absolute;
+            top: 500px;
+            animation: fly 6s linear forwards;
+        }
+        .vez1 {
+            width: 200px;
+            height: 700px;
+            background: linear-gradient(180deg, #3b4a6b, #1f2942);
+            position: absolute;
+            bottom: 0;
+            border-radius: 6px;
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+            right: 500px;
+        }
+        .vez2 {
+            width: 200px;
+            height: 700px;
+            background: linear-gradient(180deg, #3b4a6b, #1f2942);
+            position: absolute;
+            bottom: 0;
+            border-radius: 6px;
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+            right: 200px;
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translateX(0);
+            }
+            60% {
+                transform: translateX(800px);
+            }
+            70% {
+                transform: translate(800px, 100px) rotate(40deg);
+            }
+            100% {
+                transform: translate(750px, 400px) rotate(80deg);
+            }
+        }
+        .explode {
+            opacity: 0;
+            transform: scale(1.5) rotate(20deg);
+            filter: blur(8px);
+        }
+        body {
+            background: url(pozadi.jpg);
+            background-size: cover;
+        }
+    </style>
+    <body>
+        <div>
+            <div class="plane1"></div>
+            <div class="plane2"></div>
+            <div class="vez1"></div>
+            <div class="vez2"></div>
+        </div>
+    </body>
+</html>
